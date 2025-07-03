@@ -3,7 +3,8 @@ export const ACTIONS = {
   save: 'Save',
   cancel: 'Cancel',
   add_items: 'Add item to list',
-  delete: 'delete'
+  delete: 'delete',
+  undo: 'undo'
 }
 
 export const LIST_ITEM = {

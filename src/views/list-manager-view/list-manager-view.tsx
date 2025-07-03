@@ -1,7 +1,6 @@
 import { useState } from "react";
-import Modal from "../../components/modal/modal";
 import { useListManager } from "../../hooks/useListManager";
-import ListItemManager from "../../components/list-item-manager/list-item-manager";
+import { ListManager, Modal } from "../../components";
 
 const ListManagerView = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -16,7 +15,7 @@ const ListManagerView = () => {
   return (
     <>
       <div className="logitravel-options">
-        <ListItemManager
+        <ListManager
           items={currentItems}
           selectedItems={selectedItems}
           setSelectedItems={setSelectedItems}

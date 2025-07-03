@@ -1,4 +1,4 @@
-export interface ListItemManagerTypes {
+export interface ListManagerTypes {
   items: string[];
   selectedItems: string[];
   setSelectedItems: React.Dispatch<React.SetStateAction<string[]>>;

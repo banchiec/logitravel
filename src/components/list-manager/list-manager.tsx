@@ -1,10 +1,10 @@
 import { ACTIONS, LIST_ITEM } from "../../constants";
 import { Button } from "../button";
-import type { ListItemManagerTypes } from "./types";
-import ListItem from "../list-item/list-item";
-import './list-item-manager.css'
+import type { ListManagerTypes } from "./types";
+import { List } from '../list'
+import './list-manager.css'
 
-const ListItemManager = (props: ListItemManagerTypes) => {
+const ListManager = (props: ListManagerTypes) => {
   const {handleOpenModal, items, onDelete, handleUndo, setSelectedItems, selectedItems} = props
 
   const handleToggleSelected = (item: string) => {
@@ -27,11 +27,17 @@ const ListItemManager = (props: ListItemManagerTypes) => {
       <h1 className="logitravel-options-title" >{LIST_ITEM.title}</h1>
       <p>{LIST_ITEM.description}</p>
       <div>
-        <ListItem items={items} selectedItems={selectedItems} handleToggleSelected={handleToggleSelected}/>
+        <List items={items} selectedItems={selectedItems} handleToggleSelected={handleToggleSelected}/>
       </div>
       <div className="logitravel-options-buttons">
         <div>
-          <Button id="undoButton" className="btn icon" children={<span>↺</span>} onClick={handleUndo} />
+          <Button 
+            id="undoButton" 
+            className="btn icon" 
+            children={<span>↺</span>} 
+            onClick={handleUndo} 
+            arialLabel={ACTIONS.undo} 
+          />
           <Button id="deleteButton" className="btn outline" children={ACTIONS.delete} onClick={() => handleDelete()}  />
         </div>
         <Button id="addButton" className="btn solid" onClick={handleOpenModal} children ={ACTIONS.add}/>
@@ -39,4 +45,4 @@ const ListItemManager = (props: ListItemManagerTypes) => {
     </div>
   )
 }
-export default ListItemManager;
+export default ListManager;

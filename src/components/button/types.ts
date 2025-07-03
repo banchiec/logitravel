@@ -6,4 +6,5 @@ export interface ButtonTypes {
   children?: ReactNode
   type?: "button" | "submit" | "reset"
   onClick?: () => void
+  arialLabel?: string
 }

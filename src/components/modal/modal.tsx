@@ -19,7 +19,7 @@ const Modal = (props: ModalTypes) => {
   };
 
   return (
-    <div className="logitravel__modal-backdrop" role="dialog" aria-modal="true">
+    <dialog className="logitravel__modal-backdrop" role="dialog" aria-modal="true">
       <div className="logitravel__modal">
         <h2 className="logitravel__title">{ACTIONS.add_items}</h2>
         <form className="logitravel__modal-form" onSubmit={onSubmit} >
@@ -32,11 +32,11 @@ const Modal = (props: ModalTypes) => {
           />
           <div className="logitravel__buttons logitravel__modal-buttons">
             <Button type="submit" className="btn solid" children={ACTIONS.add} />
-            <Button type="button" className="btn outline" children={ACTIONS.cancel} onClick={handleClose} />
+            <Button className="btn outline" children={ACTIONS.cancel} onClick={handleClose} />
           </div>
         </form>
       </div>
-    </div>
+    </dialog>
   );
 };
 

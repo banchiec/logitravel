@@ -1,4 +1,4 @@
-import ListManagerView from '../views/list-manager-view/list-manager-view';
+import { ListManagerView } from '../views'
 import './App.css'
 
 function App() {

@@ -1,6 +1,6 @@
-import type { ListItemTypes } from "./types"
+import type { ListTypes } from "./types"
 
-const ListItem = (props: ListItemTypes) => {
+const List = (props: ListTypes) => {
   const {items, selectedItems, handleToggleSelected} = props
   return(
     <ul id="textList" className="list">
@@ -16,4 +16,4 @@ const ListItem = (props: ListItemTypes) => {
     </ul>
   )
 }
-export default ListItem
+export default List

@@ -1,4 +1,4 @@
-export interface ListItemTypes {
+export interface ListTypes {
   items: string[]
   selectedItems: string[]
   handleToggleSelected: (item: string) => void
